@@ -7,6 +7,7 @@
 #include "FirstPersonCharacter.generated.h"
 
 class UInputComponent;
+class ABullet;
 
 UCLASS(config=Game)
 class AFirstPersonCharacter : public ACharacter
@@ -66,7 +67,7 @@ public:
 
 	/** Projectile class to spawn */
 	UPROPERTY(EditDefaultsOnly, Category=Projectile)
-	TSubclassOf<class ATestingGroundsProjectile> ProjectileClass;
+	TSubclassOf<class ABullet> ProjectileClass;
 
 	/** Sound to play each time we fire */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
